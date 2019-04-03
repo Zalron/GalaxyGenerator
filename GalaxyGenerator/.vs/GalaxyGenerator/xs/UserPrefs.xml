@@ -1,9 +1,9 @@
 ﻿<Properties StartupConfiguration="{946D2BA6-E863-1172-C682-C7C649A18186}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Sector.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../My-Project/Project Caprica/Assets/Scripts/Data/StarSystem.cs">
     <Files>
-      <File FileName="../../My-Project/Project Caprica/Assets/Scripts/Data/Galaxy.cs" Line="33" Column="50" />
-      <File FileName="Assets/Scripts/Sector.cs" Line="26" Column="30" />
-      <File FileName="../../My-Project/Project Caprica/Assets/Scripts/Data/StarSystem.cs" Line="21" Column="37" />
+      <File FileName="../../My-Project/Project Caprica/Assets/Scripts/Data/Galaxy.cs" Line="49" Column="46" />
+      <File FileName="Assets/Scripts/Sector.cs" Line="22" Column="48" />
+      <File FileName="../../My-Project/Project Caprica/Assets/Scripts/Data/StarSystem.cs" Line="31" Column="31" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
