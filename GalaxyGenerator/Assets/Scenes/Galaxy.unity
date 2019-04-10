@@ -168,10 +168,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dacfa77bcf1d0495abfb173444b173a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SectorPosition: 0
+  sectorType: 3
+  SectorPosition: {x: 0, y: 0, z: 0}
   StarSystemsObject: {fileID: 348783780927491640, guid: df7c4c02d040540bca36627bebb53cc2,
     type: 3}
-  StarPosition: {x: 0, y: 0, z: 0}
+  SectorStars: 0
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 namespace GalaxyGenerator
 {
-    public class Galaxy : MonoBehaviour
+    public class Galaxy
     {
 
         // Start is called before the first frame update

@@ -12,23 +12,50 @@ namespace GalaxyGenerator
     }
     public class Sector : MonoBehaviour
     {
-
-        public int SectorPosition;
+        public SectorType sectorType;
+        public Vector3 SectorPosition;
         public GameObject StarSystemsObject;
-        public Vector3 StarPosition;
+        public int SectorStars;
         int SectorWidth = 100;
         void Start()
         {
-            GenerateSector();
+            SectorPosition = this.transform.position;
+            GenerateSector(sectorType);
         }
-        public void GenerateSector()
+        public void GenerateSector(SectorType sectorType)
         {
-            int SectorStars = Random.Range(200, 400 + 1);
-            for (int i = 0; i < SectorStars; i++)
+            Vector3 StarPosition = new Vector3(Random.Range(0, SectorWidth + 1), Random.Range(0, SectorWidth + 1), Random.Range(0, SectorWidth + 1));
+            if (sectorType == SectorType.Core)
             {
-                StarPosition = new Vector3(Random.Range(0, SectorWidth + 1), Random.Range(0, SectorWidth + 1), Random.Range(0, SectorWidth + 1));
-                Instantiate(StarSystemsObject, StarPosition,
-                Quaternion.identity);
+                SectorStars = Random.Range(500, 800 + 1);
+                for (int i = 0; i < SectorStars; i++)
+                {
+                    Instantiate(StarSystemsObject, StarPosition, Quaternion.identity);
+                }
+            }
+            else if (sectorType == SectorType.Middle)
+            {
+                SectorStars = Random.Range(200, 500 + 1);
+                for (int i = 0; i < SectorStars; i++)
+                {
+                    Instantiate(StarSystemsObject, StarPosition, Quaternion.identity);
+                }
+            }
+            else if (sectorType == SectorType.Edge)
+            {
+                SectorStars = Random.Range(50, 200 + 1);
+                for (int i = 0; i < SectorStars; i++)
+                {
+                    Instantiate(StarSystemsObject, StarPosition, Quaternion.identity);
+                }
+            }
+            else if (sectorType == SectorType.Far)
+            {
+                SectorStars = Random.Range(10, 50 + 1);
+                for (int i = 0; i < SectorStars; i++)
+                {
+                    Instantiate(StarSystemsObject, StarPosition, Quaternion.identity);
+                }
             }
         }
     }
