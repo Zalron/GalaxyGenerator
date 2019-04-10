@@ -1,9 +1,9 @@
 ﻿<Properties StartupConfiguration="{946D2BA6-E863-1172-C682-C7C649A18186}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/StarSystem.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Galaxy.cs">
     <Files>
       <File FileName="Assets/Scripts/Sector.cs" Line="19" Column="31" />
-      <File FileName="Assets/Scripts/Galaxy.cs" Line="6" Column="24" />
-      <File FileName="Assets/Scripts/Universe.cs" Line="20" Column="2" />
+      <File FileName="Assets/Scripts/Galaxy.cs" Line="12" Column="1" />
+      <File FileName="Assets/Scripts/Universe.cs" Line="7" Column="6" />
       <File FileName="Assets/Scripts/Planet.cs" Line="5" Column="20" />
       <File FileName="Assets/Scripts/StarSystem.cs" Line="9" Column="1" />
     </Files>
@@ -13,22 +13,17 @@
           <Node name="GalaxyGenerator" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="StarSystem.cs" selected="True" />
+                <Node name="Galaxy.cs" selected="True" />
               </Node>
             </Node>
           </Node>
-        </State>
-      </Pad>
-      <Pad Id="MonoDevelop.UnitTesting.TestPad">
-        <State name="__root__">
-          <Node name="GalaxyGenerator" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="2874cb16-28ca-4a49-872a-86d7b6a3bdc9" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="4ccd1819-f745-4f32-9f68-58341e9aa5cf" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
