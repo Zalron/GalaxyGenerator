@@ -15,8 +15,10 @@ namespace GalaxyGenerator
 
         public int SectorPosition;
         public int SectorStars;
-        public GameObject Stars;
+        public GameObject StarsSystem;
         public Vector3 StarPosition;
+        int SectorWidth = 100;
+        int NumStars = 50;
         public Sector()
         {
             SectorStars = Random.Range(1, 400);
@@ -42,13 +44,13 @@ namespace GalaxyGenerator
         //}
         public void GenerateSector()
         {
-            int SectorWidth = 100;
-            for (int i = 0; i < SectorWidth; i++)
+            for (int i = 0; i < NumStars; i++)
             {
-                StarPosition = new Vector3(
+                Instantiate(StarSystem, new Vector3(
                 Random.Range(0, SectorWidth),
                 Random.Range(0, SectorWidth),
-                Random.Range(0, SectorWidth));
+                Random.Range(0, SectorWidth)), 
+                Quaternion.Identity);
             }
         }
     }
