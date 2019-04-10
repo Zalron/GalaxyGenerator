@@ -1,19 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class Galaxy : MonoBehaviour
+namespace GalaxyGenerator
 {
-    Sector = sector;
-    // Start is called before the first frame update
-    void Start()
+    public class Galaxy : MonoBehaviour
     {
-        sector.Generate;
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        // Start is called before the first frame update
+        void Start()
+        {
+
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+
+        }
     }
 }

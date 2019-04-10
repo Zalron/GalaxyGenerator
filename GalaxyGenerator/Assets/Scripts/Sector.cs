@@ -14,43 +14,21 @@ namespace GalaxyGenerator
     {
 
         public int SectorPosition;
-        public int SectorStars;
-        public GameObject StarsSystem;
+        public GameObject StarSystemsObject;
         public Vector3 StarPosition;
         int SectorWidth = 100;
-        int NumStars = 50;
-        public Sector()
+        void Start()
         {
-            SectorStars = Random.Range(1, 400);
+            GenerateSector();
         }
-        //public void Generate() 
-        //{
-        //    // Fist pass, just make some random stars for us
-
-        //    int galaxyWidth = GalaxyConfig.GalaxyWidth;
-        //    for (int i = 0; i < GalaxyConfig.NumStars; i++)
-        //    {
-        //        StarSystem ss = new StarSystem();
-        //        ss.Position = new Vector3
-        //            (
-        //            Random.Range(-galaxyWidth / 2, galaxyWidth / 2),
-        //            Random.Range(-galaxyWidth / 2, galaxyWidth / 2),
-        //            Random.Range(-galaxyWidth / 2, galaxyWidth / 2)
-        //            );
-        //        ss.Generate(/* Do we pass exactly what time of start system we want?*/);
-        //        StarSystems.Add(ss);
-        //    }
-        //    Debug.Log("Num Stars Generated:" + StarSystems.Count);
-        //}
         public void GenerateSector()
         {
-            for (int i = 0; i < NumStars; i++)
+            int SectorStars = Random.Range(200, 400 + 1);
+            for (int i = 0; i < SectorStars; i++)
             {
-                Instantiate(StarSystem, new Vector3(
-                Random.Range(0, SectorWidth),
-                Random.Range(0, SectorWidth),
-                Random.Range(0, SectorWidth)), 
-                Quaternion.Identity);
+                StarPosition = new Vector3(Random.Range(0, SectorWidth + 1), Random.Range(0, SectorWidth + 1), Random.Range(0, SectorWidth + 1));
+                Instantiate(StarSystemsObject, StarPosition,
+                Quaternion.identity);
             }
         }
     }

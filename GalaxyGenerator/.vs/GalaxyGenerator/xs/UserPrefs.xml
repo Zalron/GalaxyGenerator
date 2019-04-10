@@ -1,9 +1,9 @@
 ﻿<Properties StartupConfiguration="{946D2BA6-E863-1172-C682-C7C649A18186}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="../../My-Project/Project Caprica/Assets/Scripts/Data/StarSystem.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Sector.cs">
     <Files>
-      <File FileName="../../My-Project/Project Caprica/Assets/Scripts/Data/Galaxy.cs" Line="49" Column="46" />
-      <File FileName="Assets/Scripts/Sector.cs" Line="22" Column="48" />
-      <File FileName="../../My-Project/Project Caprica/Assets/Scripts/Data/StarSystem.cs" Line="31" Column="31" />
+      <File FileName="Assets/Scripts/Sector.cs" Line="17" Column="43" />
+      <File FileName="Assets/Scripts/Galaxy.cs" Line="21" Column="2" />
+      <File FileName="Assets/Scripts/Universe.cs" Line="20" Column="2" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -17,16 +17,11 @@
           </Node>
         </State>
       </Pad>
-      <Pad Id="MonoDevelop.UnitTesting.TestPad">
-        <State name="__root__">
-          <Node name="GalaxyGenerator" expanded="True" selected="True" />
-        </State>
-      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="1ee0e011-8dd5-4793-a997-db6c3e94a6e3" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
