@@ -27,18 +27,18 @@ namespace GalaxyGenerator
             starSystemsObject = StarSystemsObject;
             galaxy = Galaxy;
             starSystemsObject = new GameObject(Galaxy.BuildSectorName(sectorPosition));
-            starSystemsObject.transform.position = sectorPosition;
+            //starSystemsObject.transform.position = sectorPosition;
             GenerateSector(SectorType);
         }
         public void GenerateSector(SectorType sectorType)
         {
-            Vector3 StarPosition = new Vector3(Random.Range(0, Galaxy.SectorSize + 1), Random.Range(0, Galaxy.SectorSize + 1), Random.Range(0, Galaxy.SectorSize + 1));
             if (sectorType == SectorType.Core)
             {
                 sectorStars = Random.Range(500, 800 + 1);
                 for (int i = 0; i < sectorStars; i++)
                 {
-                    galaxy.GenerateSectorStars(StarPosition);
+                    Vector3 StarPosition = new Vector3(Random.Range(sectorPosition.x, Galaxy.SectorSize + sectorPosition.x + 1), Random.Range(sectorPosition.y, Galaxy.SectorSize + sectorPosition.y + 1), Random.Range(sectorPosition.z, Galaxy.SectorSize + sectorPosition.z + 1));
+                    galaxy.GenerateSectorStars(StarPosition, starSystemsObject);
                 }
             }
             else if (sectorType == SectorType.Middle)
@@ -46,7 +46,8 @@ namespace GalaxyGenerator
                 sectorStars = Random.Range(200, 500 + 1);
                 for (int i = 0; i < sectorStars; i++)
                 {
-                    galaxy.GenerateSectorStars(StarPosition);
+                    Vector3 StarPosition = new Vector3(Random.Range(sectorPosition.x, Galaxy.SectorSize + sectorPosition.x + 1), Random.Range(sectorPosition.y, Galaxy.SectorSize + sectorPosition.y + 1), Random.Range(sectorPosition.z, Galaxy.SectorSize + sectorPosition.z + 1));
+                    galaxy.GenerateSectorStars(StarPosition, starSystemsObject);
                 }
             }
             else if (sectorType == SectorType.Edge)
@@ -54,7 +55,8 @@ namespace GalaxyGenerator
                 sectorStars = Random.Range(50, 200 + 1);
                 for (int i = 0; i < sectorStars; i++)
                 {
-                    galaxy.GenerateSectorStars(StarPosition);
+                    Vector3 StarPosition = new Vector3(Random.Range(sectorPosition.x, Galaxy.SectorSize + sectorPosition.x + 1), Random.Range(sectorPosition.y, Galaxy.SectorSize + sectorPosition.y + 1), Random.Range(sectorPosition.z, Galaxy.SectorSize + sectorPosition.z + 1));
+                    galaxy.GenerateSectorStars(StarPosition, starSystemsObject);
                 }
             }
             else if (sectorType == SectorType.Far)
@@ -62,7 +64,8 @@ namespace GalaxyGenerator
                 sectorStars = Random.Range(10, 50 + 1);
                 for (int i = 0; i < sectorStars; i++)
                 {
-                    galaxy.GenerateSectorStars(StarPosition);
+                    Vector3 StarPosition = new Vector3(Random.Range(sectorPosition.x, Galaxy.SectorSize + sectorPosition.x + 1), Random.Range(sectorPosition.y, Galaxy.SectorSize + sectorPosition.y + 1), Random.Range(sectorPosition.z, Galaxy.SectorSize + sectorPosition.z + 1));
+                    galaxy.GenerateSectorStars(StarPosition, starSystemsObject);
                 }
             }
         }
