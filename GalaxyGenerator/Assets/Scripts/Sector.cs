@@ -80,6 +80,7 @@ namespace GalaxyGenerator
         {
             string ssn = BuildStarSystemName(StarPosition);
             StarSystem s = new StarSystem(StarType.NONE, StarType.NONE, StarType.NONE, StarSystemType.COUNT, 0, StarPosition, ssn);
+            
         }
     }
 }

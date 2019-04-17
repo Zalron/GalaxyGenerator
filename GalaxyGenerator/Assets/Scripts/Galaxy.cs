@@ -33,6 +33,7 @@ namespace GalaxyGenerator
         }
         void GenerateGalaxy(int x, int y, int z, int startradius, int radius)// builds Sectors around the player
         {
+
             //builds chunk center
             GenerateSectorAt(x, y, z);
             //builds chunk forward
