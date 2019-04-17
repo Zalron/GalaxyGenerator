@@ -20,14 +20,12 @@ namespace GalaxyGenerator
         void Start()
         {
             GenerateGalaxy((int)(player.transform.position.x / SectorSize), (int)(player.transform.position.y / SectorSize), (int)(player.transform.position.z / SectorSize), 1, 1);
-            Debug.Log("generating");
         }
-        public static string BuildSectorName(Vector3 v) // assigning a name to a chunk
+        public static string BuildSectorName(Vector3 v) // assigning a name to a Sector
         {
-            Debug.Log("generating");
             return (int)v.x + "_" + (int)v.y + "_" + (int)v.z;
         }
-        void GenerateSectorAt(int x, int y, int z)// builds chunks
+        void GenerateSectorAt(int x, int y, int z)// builds Sectors
         {
             Vector3 SectorPosition = new Vector3(x * SectorSize, y * SectorSize, z * SectorSize);
             string sn = BuildSectorName(SectorPosition);
@@ -39,27 +37,20 @@ namespace GalaxyGenerator
             GenerateSectorAt(x, y, z);
             //builds chunk forward
             GenerateSectorAt(x, y, z + 1);
-            Debug.Log("generating");
             //builds chunk back
             GenerateSectorAt(x, y, z - 1);
-            Debug.Log("generating");
             //builds chunk left
             GenerateSectorAt(x - 1, y, z);
-            Debug.Log("generating");
             //builds chunk right
             GenerateSectorAt(x + 1, y, z);
-            Debug.Log("generating");
             //builds chunk up
             GenerateSectorAt(x, y + 1, z);
-            Debug.Log("generating");
             //builds chunk down
             GenerateSectorAt(x, y - 1, z);
-            Debug.Log("generating");
         }
         public void GenerateSectorStars(Vector3 StarPosition, GameObject sector)
         {
             Instantiate(starSystemsObject, StarPosition, Quaternion.identity, sector.transform);
-            Debug.Log("generating");
         }
     }
 }

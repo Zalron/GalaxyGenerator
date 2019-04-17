@@ -13,7 +13,6 @@ namespace GalaxyGenerator
     public class Sector
     {
         public SectorType sectorType;
-        public Sector sectorMB;
         public Galaxy galaxy;
         public string sectorName;
         public Vector3 sectorPosition;
@@ -30,6 +29,10 @@ namespace GalaxyGenerator
             //starSystemsObject.transform.position = sectorPosition;
             GenerateSector(SectorType);
         }
+        public static string BuildStarSystemName(Vector3 v) // assigning a name to a Sector
+        {
+            return (int)v.x + "_" + (int)v.y + "_" + (int)v.z;
+        }
         public void GenerateSector(SectorType sectorType)
         {
             if (sectorType == SectorType.Core)
@@ -38,6 +41,7 @@ namespace GalaxyGenerator
                 for (int i = 0; i < sectorStars; i++)
                 {
                     Vector3 StarPosition = new Vector3(Random.Range(sectorPosition.x, Galaxy.SectorSize + sectorPosition.x + 1), Random.Range(sectorPosition.y, Galaxy.SectorSize + sectorPosition.y + 1), Random.Range(sectorPosition.z, Galaxy.SectorSize + sectorPosition.z + 1));
+                    GenerateStarSystem(StarPosition);
                     galaxy.GenerateSectorStars(StarPosition, starSystemsObject);
                 }
             }
@@ -47,6 +51,7 @@ namespace GalaxyGenerator
                 for (int i = 0; i < sectorStars; i++)
                 {
                     Vector3 StarPosition = new Vector3(Random.Range(sectorPosition.x, Galaxy.SectorSize + sectorPosition.x + 1), Random.Range(sectorPosition.y, Galaxy.SectorSize + sectorPosition.y + 1), Random.Range(sectorPosition.z, Galaxy.SectorSize + sectorPosition.z + 1));
+                    GenerateStarSystem(StarPosition);
                     galaxy.GenerateSectorStars(StarPosition, starSystemsObject);
                 }
             }
@@ -56,6 +61,7 @@ namespace GalaxyGenerator
                 for (int i = 0; i < sectorStars; i++)
                 {
                     Vector3 StarPosition = new Vector3(Random.Range(sectorPosition.x, Galaxy.SectorSize + sectorPosition.x + 1), Random.Range(sectorPosition.y, Galaxy.SectorSize + sectorPosition.y + 1), Random.Range(sectorPosition.z, Galaxy.SectorSize + sectorPosition.z + 1));
+                    GenerateStarSystem(StarPosition);
                     galaxy.GenerateSectorStars(StarPosition, starSystemsObject);
                 }
             }
@@ -65,9 +71,15 @@ namespace GalaxyGenerator
                 for (int i = 0; i < sectorStars; i++)
                 {
                     Vector3 StarPosition = new Vector3(Random.Range(sectorPosition.x, Galaxy.SectorSize + sectorPosition.x + 1), Random.Range(sectorPosition.y, Galaxy.SectorSize + sectorPosition.y + 1), Random.Range(sectorPosition.z, Galaxy.SectorSize + sectorPosition.z + 1));
+                    GenerateStarSystem(StarPosition);
                     galaxy.GenerateSectorStars(StarPosition, starSystemsObject);
                 }
             }
+        }
+        public void GenerateStarSystem(Vector3 StarPosition) 
+        {
+            string ssn = BuildStarSystemName(StarPosition);
+            StarSystem s = new StarSystem(StarType.NONE, StarType.NONE, StarType.NONE, StarSystemType.COUNT, 0, StarPosition, ssn);
         }
     }
 }
