@@ -37,8 +37,10 @@ namespace GalaxyGenerator
         public StarType starType3;
         public StarSystemType starSystemType;
         public Vector3 starPosition;
+        public Sector sector;
+        public GameObject starSystemsObject;
         public string starSystemName;
-        public StarSystem(StarType StarType1, StarType StarType2, StarType StarType3, StarSystemType StarSystemType, int NumPlanets, Vector3 StarPosition, string StarSystemName) 
+        public StarSystem(StarType StarType1, StarType StarType2, StarType StarType3, StarSystemType StarSystemType, int NumPlanets, Vector3 StarPosition, string StarSystemName, Sector Sector, GameObject StarSystemObject) 
         {
             numPlanets = NumPlanets;
             GenerateStarSystemType();
@@ -49,6 +51,8 @@ namespace GalaxyGenerator
             starType3 = StarType3;
             starPosition = StarPosition;
             starSystemName = StarSystemName;
+            sector = Sector;
+            starSystemsObject = StarSystemObject;
         }
         void GenerateStarSystemType() 
         {
