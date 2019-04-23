@@ -6,10 +6,11 @@ namespace GalaxyGenerator
 {
     public class Galaxy : MonoBehaviour
     {
-        
+
         //public Sector sector;
+        public Mesh sphereMesh;
         public GameObject player;
-        public GameObject starSystemsObject;
+        //public GameObject starSystemsObjectMaster;
         public static int SectorSize = 1000;
         public static ConcurrentDictionary<string, Sector> sectors;
         public static List<string> toRemove = new List<string>(); // a list to remove the chunks that are not needed from the dictionary
@@ -20,10 +21,13 @@ namespace GalaxyGenerator
         void Start()
         {
             GenerateGalaxy((int)(player.transform.position.x / SectorSize), (int)(player.transform.position.y / SectorSize), (int)(player.transform.position.z / SectorSize), 1, 1);
+            //sphereMesh = starSystemsObjectMaster.GetComponent<MeshFilter>().mesh;
+            Sector.sphereMesh = sphereMesh;
+            //Destroy(starSystemsObjectMaster);
         }
         public static string BuildSectorName(Vector3 v) // assigning a name to a Sector
         {
-            return (int)v.x + "_" + (int)v.y + "_" + (int)v.z;
+            return "Sector : " + (int)v.x + "_" + (int)v.y + "_" + (int)v.z;
         }
         void GenerateSectorAt(int x, int y, int z)// builds Sectors
         {
@@ -48,12 +52,12 @@ namespace GalaxyGenerator
             //builds chunk down
             GenerateSectorAt(x, y - 1, z);
         }
-        SectorType GenerateSectorType(Vector3 SectorPosition)
-        {
-            if (SectorPosition == )
-            {
+        //SectorType GenerateSectorType(Vector3 SectorPosition)
+        //{
+        //    if (SectorPosition == )
+        //    {
 
-            }
-        }
+        //    }
+        //}
     }
 }
